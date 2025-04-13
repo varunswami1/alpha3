@@ -19,7 +19,7 @@ const LearningResources = () => {
       id: 1,
       title: "Getting Started with Gardening",
       thumbnail: "https://i.ytimg.com/vi/BO8yuSTc3fo/maxresdefault.jpg",
-      duration: "15 min",
+      duration: "11 min",
       description: "Learn the basics of setting up your first garden.",
       videoId: "BO8yuSTc3fo"
     },
@@ -27,7 +27,7 @@ const LearningResources = () => {
       id: 2,
       title: "Seasonal Planting Guide",
       thumbnail: "https://i.ytimg.com/vi/1HtBMfbJ_nY/maxresdefault.jpg",
-      duration: "12 min",
+      duration: "21 min",
       description: "Understand what to plant during different seasons.",
       videoId: "1HtBMfbJ_nY"
     },
@@ -35,7 +35,7 @@ const LearningResources = () => {
       id: 3,
       title: "Organic Pest Control",
       thumbnail: "https://i.ytimg.com/vi/_1BdRzoN-50/maxresdefault.jpg",
-      duration: "18 min",
+      duration: "30 min",
       description: "Natural ways to keep pests away from your garden.",
       videoId: "_1BdRzoN-50"
     }
