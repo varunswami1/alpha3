@@ -56,7 +56,7 @@ const mockProducts = [
     discountedPrice: 33.99,
     stockStatus: "In Stock",
     images: [
-      "🪴",
+      "/images/others/Smart Self-Watering Pot.webp",
       "🌱",
       "🌿", // Using emojis as placeholders
     ],
@@ -86,7 +86,7 @@ const mockProducts = [
     discountedPrice: 24.99,
     stockStatus: "In Stock",
     images: [
-      "💧",
+      "/images/others/Organic Plant Food Concentrate.jpg",
       "🧪",
       "🌱", // Using emojis as placeholders
     ],
@@ -111,7 +111,7 @@ const mockProducts = [
     discountedPrice: 49.49,
     stockStatus: "Low Stock",
     images: [
-      "📱",
+      "/images/others/Plant Health Monitor.jpeg",
       "🌡️",
       "🔆", // Using emojis as placeholders
     ],
