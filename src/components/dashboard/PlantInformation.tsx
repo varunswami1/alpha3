@@ -15,7 +15,7 @@ interface PlantInfo {
 }
 
 const handleViewall = () => {
-  navigate('/my-garden');
+  navigate('/garden');
 };
 
 const plants: PlantInfo[] = [
