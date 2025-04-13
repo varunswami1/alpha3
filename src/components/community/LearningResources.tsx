@@ -18,23 +18,26 @@ const LearningResources = () => {
     {
       id: 1,
       title: "Getting Started with Gardening",
-      thumbnail: "/images/others/Getting Started with Gardening.jpeg",
+      thumbnail: "https://i.ytimg.com/vi/BO8yuSTc3fo/maxresdefault.jpg",
       duration: "15 min",
-      description: "Learn the basics of setting up your first garden."
+      description: "Learn the basics of setting up your first garden.",
+      videoId: "BO8yuSTc3fo"
     },
     {
       id: 2,
       title: "Seasonal Planting Guide",
-      thumbnail: "/images/others/Seasonal Planting Guide.jpg",
+      thumbnail: "https://i.ytimg.com/vi/1HtBMfbJ_nY/maxresdefault.jpg",
       duration: "12 min",
-      description: "Understand what to plant during different seasons."
+      description: "Understand what to plant during different seasons.",
+      videoId: "1HtBMfbJ_nY"
     },
     {
       id: 3,
       title: "Organic Pest Control",
-      thumbnail: "/images/others/Organic Pest Control.jpg",
+      thumbnail: "https://i.ytimg.com/vi/_1BdRzoN-50/maxresdefault.jpg",
       duration: "18 min",
-      description: "Natural ways to keep pests away from your garden."
+      description: "Natural ways to keep pests away from your garden.",
+      videoId: "_1BdRzoN-50"
     }
   ];
 
@@ -78,6 +81,12 @@ const LearningResources = () => {
     "Plant labels"
   ];
 
+  const openYoutubeVideo = (videoId?: string) => {
+     if (videoId) {
+       window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+     }
+   };
+  
   return (
     <div className="space-y-6">
       <Tabs defaultValue="videos" value={activeTab} onValueChange={setActiveTab}>
@@ -118,7 +127,10 @@ const LearningResources = () => {
                   <div className="text-sm text-muted-foreground mt-2">Duration: {video.duration}</div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">
+                  <Button 
+                     className="w-full"
+                     onClick={() => openYoutubeVideo(video.videoId)}
+                   >
                     <Play className="h-4 w-4 mr-2" /> Watch Now
                   </Button>
                 </CardFooter>
