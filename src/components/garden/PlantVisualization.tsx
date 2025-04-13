@@ -169,11 +169,20 @@ useEffect(() => {
     return climateMatch;
   });
 
-  // 🧠 Calculate number of plants based on area (capped)
-  const maxPlantsByArea = Math.min(25, Math.max(4, Math.floor(data.area / 4)));
+  // 🌿 Plant count by area tiers
+  const getPlantCountByArea = (area: number): number => {
+    if (area < 5) return 1;
+    if (area <= 10) return 2;
+    if (area <= 20) return 4;
+    if (area <= 50) return 6;
+    if (area <= 100) return 10;
+    return 15; // For very large areas
+  };
 
-  setRecommendedPlants(filteredPlants.slice(0, maxPlantsByArea) as unknown as Plant[]);
+  const maxPlants = getPlantCountByArea(data.area || 0);
+  setRecommendedPlants(filteredPlants.slice(0, maxPlants) as unknown as Plant[]);
 }, [data]);
+
 
 
   
