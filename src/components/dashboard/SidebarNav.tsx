@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Book,
-  Calendar,
   Home,
   MessageCircle,
   Flower,
@@ -37,11 +36,6 @@ const navItems: NavItem[] = [
     label: "Recommendations",
     icon: Sprout,
     href: "/plant-recommendation",
-  },
-  {
-    label: "Calendar",
-    icon: Calendar,
-    href: "/calendar",
   },
   {
     label: "Community",
