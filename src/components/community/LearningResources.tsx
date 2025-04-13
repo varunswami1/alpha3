@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Card, 
@@ -19,21 +18,21 @@ const LearningResources = () => {
     {
       id: 1,
       title: "Getting Started with Gardening",
-      thumbnail: "https://placehold.co/300x200",
+      thumbnail: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2942&auto=format&fit=crop",
       duration: "15 min",
       description: "Learn the basics of setting up your first garden."
     },
     {
       id: 2,
       title: "Seasonal Planting Guide",
-      thumbnail: "https://placehold.co/300x200",
+      thumbnail: "https://images.unsplash.com/photo-1557844352-761f2565b576?q=80&w=2940&auto=format&fit=crop",
       duration: "12 min",
       description: "Understand what to plant during different seasons."
     },
     {
       id: 3,
       title: "Organic Pest Control",
-      thumbnail: "https://placehold.co/300x200",
+      thumbnail: "https://images.unsplash.com/photo-1599685315640-9ceec5d4f0cf?q=80&w=2942&auto=format&fit=crop",
       duration: "18 min",
       description: "Natural ways to keep pests away from your garden."
     }
@@ -43,6 +42,7 @@ const LearningResources = () => {
     {
       id: 1,
       title: "Complete Beginner's Guide",
+      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2940&auto=format&fit=crop",
       steps: [
         "Choose the right location",
         "Prepare your soil",
@@ -54,6 +54,7 @@ const LearningResources = () => {
     {
       id: 2,
       title: "Vegetable Garden Guide",
+      image: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=2940&auto=format&fit=crop",
       steps: [
         "Plan your vegetable layout",
         "Understand companion planting",
@@ -98,13 +99,18 @@ const LearningResources = () => {
         <TabsContent value="videos" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {videos.map(video => (
-              <Card key={video.id}>
+              <Card key={video.id} className="overflow-hidden">
                 <CardHeader className="p-0">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title} 
-                    className="w-full h-40 object-cover rounded-t-lg"
-                  />
+                  <div className="relative group">
+                    <img 
+                      src={video.thumbnail} 
+                      alt={video.title} 
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Play className="h-12 w-12 text-white" />
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <CardTitle className="text-lg">{video.title}</CardTitle>
@@ -124,13 +130,18 @@ const LearningResources = () => {
         <TabsContent value="guides" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {guides.map(guide => (
-              <Card key={guide.id}>
-                <CardHeader>
-                  <CardTitle>{guide.title}</CardTitle>
-                  <CardDescription>Follow these steps to get started</CardDescription>
+              <Card key={guide.id} className="overflow-hidden">
+                <CardHeader className="p-0">
+                  <img 
+                    src={guide.image} 
+                    alt={guide.title} 
+                    className="w-full h-48 object-cover"
+                  />
                 </CardHeader>
-                <CardContent>
-                  <ol className="list-decimal list-inside space-y-2">
+                <CardContent className="pt-6">
+                  <CardTitle>{guide.title}</CardTitle>
+                  <CardDescription className="mt-2">Follow these steps to get started</CardDescription>
+                  <ol className="list-decimal list-inside space-y-2 mt-4">
                     {guide.steps.map((step, index) => (
                       <li key={index} className="text-sm">{step}</li>
                     ))}

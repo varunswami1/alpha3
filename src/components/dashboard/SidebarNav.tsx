@@ -1,6 +1,15 @@
-
 import { Link, useLocation } from "react-router-dom";
-import { Book, Calendar, Home, MessageCircle, Flower, Search, Camera } from "lucide-react";
+import {
+  Book,
+  Calendar,
+  Home,
+  MessageCircle,
+  Flower,
+  Search,
+  Camera,
+  ShoppingBag,
+  Sprout,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -31,6 +40,11 @@ const navItems: NavItem[] = [
     href: "/camera",
   },
   {
+    label: "Recommendations",
+    icon: Sprout,
+    href: "/plant-recommendation",
+  },
+  {
     label: "Calendar",
     icon: Calendar,
     href: "/calendar",
@@ -39,6 +53,11 @@ const navItems: NavItem[] = [
     label: "Community",
     icon: MessageCircle,
     href: "/community",
+  },
+  {
+    label: "Shop",
+    icon: ShoppingBag,
+    href: "/shop",
   },
 ];
 
@@ -54,9 +73,11 @@ const SidebarNav = () => {
           to={item.href}
           className={cn(
             "flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md",
-            currentPath === item.href || 
-            (item.href === "/garden" && currentPath.startsWith("/plant/")) ||
-            (item.href === "/plant-search" && currentPath.startsWith("/plant-info/"))
+            currentPath === item.href ||
+              (item.href === "/garden" && currentPath.startsWith("/plant/")) ||
+              (item.href === "/plant-search" &&
+                currentPath.startsWith("/plant-info/")) ||
+              (item.href === "/shop" && currentPath.startsWith("/shop/"))
               ? "bg-primary/10 text-primary"
               : "text-muted-foreground hover:bg-muted hover:text-foreground"
           )}

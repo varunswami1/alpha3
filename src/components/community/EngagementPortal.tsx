@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Card, 
@@ -42,10 +41,10 @@ const EngagementPortal = () => {
       id: 1,
       user: {
         name: "Jane Smith",
-        avatar: "https://placehold.co/100x100",
+        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop",
       },
-      content: "Just planted some tomatoes in my garden! Can't wait to see them grow. Any tips for keeping them healthy?",
-      image: "https://placehold.co/600x400",
+      content: "Just planted my first batch of organic tomatoes! 🍅 Using the companion planting technique with basil to keep pests away naturally. Can't wait to see them grow! Any tips for keeping them healthy during the summer?",
+      image: "https://images.unsplash.com/photo-1592419044707-20d4598f34ef?q=80&w=2940&auto=format&fit=crop",
       timestamp: "2 hours ago",
       likes: 24,
       comments: 5,
@@ -55,9 +54,10 @@ const EngagementPortal = () => {
       id: 2,
       user: {
         name: "Michael Johnson",
-        avatar: "https://placehold.co/100x100",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop",
       },
-      content: "Having trouble with aphids on my roses. Any natural remedies that won't harm beneficial insects?",
+      content: "My rose garden is being attacked by aphids! 🌹 I've tried neem oil but looking for more natural remedies that won't harm beneficial insects. Here's what they look like - any suggestions from experienced gardeners?",
+      image: "https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=2940&auto=format&fit=crop",
       timestamp: "Yesterday",
       likes: 18,
       comments: 12,
@@ -67,15 +67,28 @@ const EngagementPortal = () => {
       id: 3,
       user: {
         name: "Sarah Williams",
-        avatar: "https://placehold.co/100x100",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop",
       },
-      content: "Look at my beautiful sunflowers! They're finally blooming after weeks of care.",
-      image: "https://placehold.co/600x400",
+      content: "Success story! 🌻 These sunflowers started as tiny seeds 2 months ago. Daily watering and lots of sunshine did the trick. Swipe to see the progression from seed to bloom!",
+      image: "https://images.unsplash.com/photo-1470509037663-253afd7f0f51?q=80&w=2940&auto=format&fit=crop",
       timestamp: "3 days ago",
       likes: 45,
       comments: 8,
       saved: true,
     },
+    {
+      id: 4,
+      user: {
+        name: "David Chen",
+        avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=150&auto=format&fit=crop",
+      },
+      content: "My urban balcony garden is thriving! 🌿 Proof that you don't need a huge space to grow your own food. Currently growing herbs, cherry tomatoes, and lettuce in these vertical planters.",
+      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2942&auto=format&fit=crop",
+      timestamp: "4 days ago",
+      likes: 56,
+      comments: 15,
+      saved: false,
+    }
   ]);
 
   const [activeTab, setActiveTab] = useState("posts");
@@ -123,7 +136,7 @@ const EngagementPortal = () => {
             </CardHeader>
             <CardContent>
               <Textarea 
-                placeholder="What's happening in your garden?"
+                placeholder="What's happening in your garden? Share your progress, ask questions, or give tips!"
                 value={newPost}
                 onChange={(e) => setNewPost(e.target.value)}
                 className="min-h-[100px]"
@@ -132,7 +145,7 @@ const EngagementPortal = () => {
             <CardFooter className="flex justify-between">
               <Button variant="outline" size="sm">
                 <Image className="h-4 w-4 mr-2" />
-                Add Image
+                Add Photo
               </Button>
               <Button onClick={handlePostSubmit} disabled={!newPost.trim()}>
                 <Send className="h-4 w-4 mr-2" />
@@ -150,7 +163,7 @@ const EngagementPortal = () => {
                     <img 
                       src={post.user.avatar} 
                       alt={post.user.name} 
-                      className="w-10 h-10 rounded-full"
+                      className="w-10 h-10 rounded-full object-cover"
                     />
                     <div>
                       <h3 className="font-medium">{post.user.name}</h3>
@@ -159,19 +172,19 @@ const EngagementPortal = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="pb-3">
-                  <p className="text-sm mb-3">{post.content}</p>
+                  <p className="text-sm mb-3 whitespace-pre-line">{post.content}</p>
                   {post.image && (
                     <img 
                       src={post.image} 
                       alt="Post image" 
-                      className="w-full h-auto rounded-md"
+                      className="w-full h-[300px] object-cover rounded-md"
                     />
                   )}
                 </CardContent>
                 <CardFooter className="flex justify-between pt-0">
                   <div className="flex space-x-4">
-                    <Button variant="ghost" size="sm" className="text-muted-foreground">
-                      <Heart className="h-4 w-4 mr-1" />
+                    <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-red-500">
+                      <Heart className={`h-4 w-4 mr-1 ${post.likes > 0 ? 'fill-red-500 text-red-500' : ''}`} />
                       {post.likes}
                     </Button>
                     <Button variant="ghost" size="sm" className="text-muted-foreground">
@@ -189,7 +202,7 @@ const EngagementPortal = () => {
                     onClick={() => toggleSaved(post.id)}
                     className={post.saved ? "text-primary" : "text-muted-foreground"}
                   >
-                    <Bookmark className="h-4 w-4" />
+                    <Bookmark className={`h-4 w-4 ${post.saved ? 'fill-current' : ''}`} />
                   </Button>
                 </CardFooter>
               </Card>
