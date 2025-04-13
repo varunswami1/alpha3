@@ -32,24 +32,19 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/garden" element={<Garden />} />
-            <Route path="/plant/:id" element={<PlantProfile />} />
-            <Route path="/plant-search" element={<PlantSearch />} />
-            <Route path="/plant-info/:id" element={<PlantInfoPage />} />
-            <Route
-              path="/plant-recommendation"
-              element={
-                <ProtectedRoute>
-                  <PlantRecommendation />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/profile" element={<UserProfile />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/shop/:id" element={<Shop />} />
+            <ProtectedRoute>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/garden" element={<Garden />} />
+              <Route path="/plant/:id" element={<PlantProfile />} />
+              <Route path="/plant-search" element={<PlantSearch />} />
+              <Route path="/plant-info/:id" element={<PlantInfoPage />} />
+              <Route path="/plant-recommendation" element={<PlantRecommendation />}/>
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/profile" element={<UserProfile />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/shop/:id" element={<Shop />} />
+            </ProtectedRoute>
           </Routes>
         </AuthProvider>
       </BrowserRouter>
