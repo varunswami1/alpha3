@@ -98,32 +98,32 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
     }
   }, [data.area]);
 
-  useEffect(() => {
-    const filteredPlants = plantDatabase.filter((plant) => {
-      const typedPlant = plant as unknown as Plant;
+  // useEffect(() => {
+  //   const filteredPlants = plantDatabase.filter((plant) => {
+  //     const typedPlant = plant as unknown as Plant;
 
-      const climateMatch = typedPlant.climate.includes(
-        data.climate as "hot" | "moderate" | "cold"
-      );
-      if (
-        !typedPlant.sunlight.includes(
-          data.sunlight as "full" | "partial" | "shade"
-        )
-      )
-        return false;
-      const [minHumidity, maxHumidity] = typedPlant.humidityRange;
-      if (data.humidity < minHumidity || data.humidity > maxHumidity)
-        return false;
-      if (
-        data.plantCategory !== "mixed" &&
-        typedPlant.category !== data.plantCategory
-      )
-        return false;
-      return climateMatch;
-    });
+  //     const climateMatch = typedPlant.climate.includes(
+  //       data.climate as "hot" | "moderate" | "cold"
+  //     );
+  //     if (
+  //       !typedPlant.sunlight.includes(
+  //         data.sunlight as "full" | "partial" | "shade"
+  //       )
+  //     )
+  //       return false;
+  //     const [minHumidity, maxHumidity] = typedPlant.humidityRange;
+  //     if (data.humidity < minHumidity || data.humidity > maxHumidity)
+  //       return false;
+  //     if (
+  //       data.plantCategory !== "mixed" &&
+  //       typedPlant.category !== data.plantCategory
+  //     )
+  //       return false;
+  //     return climateMatch;
+  //   });
 
-    setRecommendedPlants(filteredPlants.slice(0, 10) as unknown as Plant[]);
-  }, [data]);
+  //   setRecommendedPlants(filteredPlants.slice(0, 10) as unknown as Plant[]);
+  // }, [data]);
 
   // Preload all background images on component mount
   useEffect(() => {
@@ -144,6 +144,39 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
     setIsBackgroundLoaded(!!preloadedImages[data.location]);
   }, [data.location, preloadedImages]);
 
+
+useEffect(() => {
+  const filteredPlants = plantDatabase.filter((plant) => {
+    const typedPlant = plant as unknown as Plant;
+
+    const climateMatch = typedPlant.climate.includes(
+      data.climate as "hot" | "moderate" | "cold"
+    );
+    if (
+      !typedPlant.sunlight.includes(
+        data.sunlight as "full" | "partial" | "shade"
+      )
+    )
+      return false;
+    const [minHumidity, maxHumidity] = typedPlant.humidityRange;
+    if (data.humidity < minHumidity || data.humidity > maxHumidity)
+      return false;
+    if (
+      data.plantCategory !== "mixed" &&
+      typedPlant.category !== data.plantCategory
+    )
+      return false;
+    return climateMatch;
+  });
+
+  // 🧠 Calculate number of plants based on area (capped)
+  const maxPlantsByArea = Math.min(25, Math.max(4, Math.floor(data.area / 4)));
+
+  setRecommendedPlants(filteredPlants.slice(0, maxPlantsByArea) as unknown as Plant[]);
+}, [data]);
+
+
+  
   // const getPlantPositions = () => {
   //   // const gridCells = gardenWidth * gardenHeight;
   //   // const cellsPerPlant = Math.max(
