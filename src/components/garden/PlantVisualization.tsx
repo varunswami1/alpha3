@@ -153,27 +153,27 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
 
       // Define regions for plant placement
      const regions = [
-       // Corners
-       { x: 10, y: 10 },       // Top-left
-       { x: 90, y: 10 },       // Top-right
-       { x: 10, y: 90 },       // Bottom-left
-       { x: 90, y: 90 },       // Bottom-right
-       // Edges
-       { x: 50, y: 10 },       // Top-middle
-       { x: 90, y: 50 },       // Right-middle
-       { x: 50, y: 90 },       // Bottom-middle
-       { x: 10, y: 50 },       // Left-middle
+      // Corners - moved slightly inward
+       { x: 15, y: 15 },       // Top-left
+       { x: 85, y: 15 },       // Top-right
+       { x: 15, y: 85 },       // Bottom-left
+       { x: 85, y: 85 },       // Bottom-right
+       // Edges - adjusted to stay within visible area
+       { x: 50, y: 15 },       // Top-middle
+       { x: 85, y: 50 },       // Right-middle
+       { x: 50, y: 85 },       // Bottom-middle
+       { x: 15, y: 50 },       // Left-middle
        // Center
        { x: 50, y: 50 },       // Center
-       // Additional regions for more plants
-       { x: 30, y: 30 },       // Upper-left quadrant
-       { x: 70, y: 30 },       // Upper-right quadrant
-       { x: 30, y: 70 },       // Lower-left quadrant
-       { x: 70, y: 70 },       // Lower-right quadrant
-       { x: 30, y: 50 },       // Middle-left
-       { x: 70, y: 50 },       // Middle-right
-       { x: 50, y: 30 },       // Middle-top
-       { x: 50, y: 70 },       // Middle-bottom
+      // Additional regions - adjusted to avoid edges
+       { x: 33, y: 33 },       // Upper-left quadrant
+       { x: 67, y: 33 },       // Upper-right quadrant
+       { x: 33, y: 67 },       // Lower-left quadrant
+       { x: 67, y: 67 },       // Lower-right quadrant
+       { x: 33, y: 50 },       // Middle-left
+       { x: 67, y: 50 },       // Middle-right
+       { x: 50, y: 33 },       // Middle-top
+       { x: 50, y: 67 },       // Middle-bottom
      ];
     
     return recommendedPlants.map((plant, index) => {
@@ -182,7 +182,7 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
        const basePosition = regions[regionIndex];
        
        // Add a small random offset for natural positioning
-       const randomOffset = 7;
+       const randomOffset = 5;
        const xRandom = Math.random() * randomOffset * 2 - randomOffset;
        const yRandom = Math.random() * randomOffset * 2 - randomOffset;
        
@@ -208,7 +208,7 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
       const widthFactor = plant.size.width / 10;
        
        // Calculate scale factor based on plant dimensions
-       const baseFactor = Math.min(Math.max((heightFactor + widthFactor) * 5, 12), 25); 
+       const baseFactor = Math.min(Math.max((heightFactor + widthFactor) * 4, 10), 22); 
        
        // For smaller gardens, scale plants accordingly
        const densityFactor = Math.min(1, Math.sqrt(gardenWidth * gardenHeight) / 10);
