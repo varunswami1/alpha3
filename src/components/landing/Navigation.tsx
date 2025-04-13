@@ -139,12 +139,6 @@ const Navigation = () => {
                   Search Plant
                 </Link>
                 <Link
-                  to="/camera"
-                  className="px-4 py-2 hover:bg-neutral-100 rounded-md"
-                >
-                  Camera
-                </Link>
-                <Link
                   to="/plant-recommendation"
                   className="px-4 py-2 hover:bg-neutral-100 rounded-md"
                 >
@@ -255,12 +249,6 @@ const Navigation = () => {
             className="text-neutral-600 hover:text-primary transition-colors font-medium"
           >
             Search Plant
-          </Link>
-          <Link
-            to="/camera"
-            className="text-neutral-600 hover:text-primary transition-colors font-medium"
-          >
-            Camera
           </Link>
           <Link
             to="/plant-recommendation"
