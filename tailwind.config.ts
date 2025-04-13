@@ -47,9 +47,18 @@ export default {
           blue: "#61AAF2",
           green: "#7EBF8E",
         },
+        "soft-green": "#e7f0dd", // Soft green color
       },
       fontFamily: {
-        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "sans-serif"],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Oxygen",
+          "Ubuntu",
+          "sans-serif",
+        ],
       },
       animation: {
         "fade-up": "fadeUp 0.5s ease-out forwards",
