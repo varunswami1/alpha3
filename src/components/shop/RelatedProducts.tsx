@@ -19,8 +19,12 @@ const RelatedProducts = ({ currentProductId }: RelatedProductsProps) => {
         {relatedProducts.map((related) => (
           <Card key={related.id} className="overflow-hidden">
             <Link to={`/shop/${related.id}`}>
-              <div className="aspect-square bg-neutral-100 flex items-center justify-center text-4xl">
-                {related.images[0]}
+              <div className="aspect-square bg-neutral-100 flex items-center justify-center overflow-hidden">
+                <img
+                  src={related.images[0]}
+                  alt={related.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardHeader className="py-3">
                 <CardTitle className="text-base">{related.name}</CardTitle>
