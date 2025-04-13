@@ -35,7 +35,7 @@ export const mockProducts: Product[] = [
     discountedPrice: 24.99,
     stockStatus: "In Stock",
     images: [
-      "public/images/others/Organic Plant Food Concentrate1.jpg", "public/images/others/Organic Plant Food Concentrate2.jpg", "public/images/others/Organic Plant Food Concentrate3.jpg"
+      "/images/others/Organic Plant Food Concentrate1.jpg", "/images/others/Organic Plant Food Concentrate2.jpg", "/images/others/Organic Plant Food Concentrate3.jpg"
     ],
     hasVideo: false,
     rating: 4.5,
