@@ -144,87 +144,127 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
     setIsBackgroundLoaded(!!preloadedImages[data.location]);
   }, [data.location, preloadedImages]);
 
-  const getPlantPositions = () => {
-    // const gridCells = gardenWidth * gardenHeight;
-    // const cellsPerPlant = Math.max(
-    //   1,
-    //   Math.floor(gridCells / recommendedPlants.length)
-    // );
+  // const getPlantPositions = () => {
+  //   // const gridCells = gardenWidth * gardenHeight;
+  //   // const cellsPerPlant = Math.max(
+  //   //   1,
+  //   //   Math.floor(gridCells / recommendedPlants.length)
+  //   // );
 
-      // Define regions for plant placement
-     const regions = [
-      // Corners - moved slightly inward
-       { x: 15, y: 15 },       // Top-left
-       { x: 85, y: 15 },       // Top-right
-       { x: 15, y: 85 },       // Bottom-left
-       { x: 85, y: 85 },       // Bottom-right
-       // Edges - adjusted to stay within visible area
-       { x: 50, y: 15 },       // Top-middle
-       { x: 85, y: 50 },       // Right-middle
-       { x: 50, y: 85 },       // Bottom-middle
-       { x: 15, y: 50 },       // Left-middle
-       // Center
-       { x: 50, y: 50 },       // Center
-      // Additional regions - adjusted to avoid edges
-       { x: 33, y: 33 },       // Upper-left quadrant
-       { x: 67, y: 33 },       // Upper-right quadrant
-       { x: 33, y: 67 },       // Lower-left quadrant
-       { x: 67, y: 67 },       // Lower-right quadrant
-       { x: 33, y: 50 },       // Middle-left
-       { x: 67, y: 50 },       // Middle-right
-       { x: 50, y: 33 },       // Middle-top
-       { x: 50, y: 67 },       // Middle-bottom
-     ];
+  //     // Define regions for plant placement
+  //    const regions = [
+  //     // Corners - moved slightly inward
+  //      { x: 15, y: 15 },       // Top-left
+  //      { x: 85, y: 15 },       // Top-right
+  //      { x: 15, y: 85 },       // Bottom-left
+  //      { x: 85, y: 85 },       // Bottom-right
+  //      // Edges - adjusted to stay within visible area
+  //      { x: 50, y: 15 },       // Top-middle
+  //      { x: 85, y: 50 },       // Right-middle
+  //      { x: 50, y: 85 },       // Bottom-middle
+  //      { x: 15, y: 50 },       // Left-middle
+  //      // Center
+  //      { x: 50, y: 50 },       // Center
+  //     // Additional regions - adjusted to avoid edges
+  //      { x: 33, y: 33 },       // Upper-left quadrant
+  //      { x: 67, y: 33 },       // Upper-right quadrant
+  //      { x: 33, y: 67 },       // Lower-left quadrant
+  //      { x: 67, y: 67 },       // Lower-right quadrant
+  //      { x: 33, y: 50 },       // Middle-left
+  //      { x: 67, y: 50 },       // Middle-right
+  //      { x: 50, y: 33 },       // Middle-top
+  //      { x: 50, y: 67 },       // Middle-bottom
+  //    ];
     
-    return recommendedPlants.map((plant, index) => {
-        // Cycle through regions based on plant index
-       const regionIndex = index % regions.length;
-       const basePosition = regions[regionIndex];
+  //   return recommendedPlants.map((plant, index) => {
+  //       // Cycle through regions based on plant index
+  //      const regionIndex = index % regions.length;
+  //      const basePosition = regions[regionIndex];
        
-       // Add a small random offset for natural positioning
-       const randomOffset = 5;
-       const xRandom = Math.random() * randomOffset * 2 - randomOffset;
-       const yRandom = Math.random() * randomOffset * 2 - randomOffset;
+  //      // Add a small random offset for natural positioning
+  //      const randomOffset = 5;
+  //      const xRandom = Math.random() * randomOffset * 2 - randomOffset;
+  //      const yRandom = Math.random() * randomOffset * 2 - randomOffset;
        
-       const xPosition = basePosition.x + xRandom;
-       const yPosition = basePosition.y + yRandom;
+  //      const xPosition = basePosition.x + xRandom;
+  //      const yPosition = basePosition.y + yRandom;
        
-       // Scale based on plant size, but within reasonable bounds
-      const heightFactor = plant.size.height / 10;
-      // const cellIndex = index * cellsPerPlant;
-      // const row = Math.floor(cellIndex / gardenWidth);
-      // const col = cellIndex % gardenWidth;
-      // const xRandom = Math.random() * 0.8 - 0.4;
-      // const yRandom = Math.random() * 0.8 - 0.4;
-      // const xPosition = 10 + ((col + xRandom) / gardenWidth) * 80;
-      // const yPosition = 10 + ((row + yRandom) / gardenHeight) * 80;
-      // const widthPercent = (plant.size.width / gardenWidth) * 70;
-      // const heightPercent = (plant.size.height / gardenHeight) * 70;
-      // const scaleFactor = Math.min(
-      //   Math.max(widthPercent, heightPercent, 15),
-      //   45
-      // );
+  //      // Scale based on plant size, but within reasonable bounds
+  //     const heightFactor = plant.size.height / 10;
+  //     // const cellIndex = index * cellsPerPlant;
+  //     // const row = Math.floor(cellIndex / gardenWidth);
+  //     // const col = cellIndex % gardenWidth;
+  //     // const xRandom = Math.random() * 0.8 - 0.4;
+  //     // const yRandom = Math.random() * 0.8 - 0.4;
+  //     // const xPosition = 10 + ((col + xRandom) / gardenWidth) * 80;
+  //     // const yPosition = 10 + ((row + yRandom) / gardenHeight) * 80;
+  //     // const widthPercent = (plant.size.width / gardenWidth) * 70;
+  //     // const heightPercent = (plant.size.height / gardenHeight) * 70;
+  //     // const scaleFactor = Math.min(
+  //     //   Math.max(widthPercent, heightPercent, 15),
+  //     //   45
+  //     // );
 
-      const widthFactor = plant.size.width / 10;
+  //     const widthFactor = plant.size.width / 10;
        
-       // Calculate scale factor based on plant dimensions
-       const baseFactor = Math.min(Math.max((heightFactor + widthFactor) * 4, 10), 22); 
+  //      // Calculate scale factor based on plant dimensions
+  //      const baseFactor = Math.min(Math.max((heightFactor + widthFactor) * 4, 10), 22); 
        
-       // For smaller gardens, scale plants accordingly
-       const densityFactor = Math.min(1, Math.sqrt(gardenWidth * gardenHeight) / 10);
-       const scaleFactor = baseFactor * densityFactor;
+  //      // For smaller gardens, scale plants accordingly
+  //      const densityFactor = Math.min(1, Math.sqrt(gardenWidth * gardenHeight) / 10);
+  //      const scaleFactor = baseFactor * densityFactor;
       
-      return {
-        ...plant,
-        position: {
-          x: xPosition,
-          y: yPosition,
-        },
-        scale: scaleFactor,
-      };
-    });
-  };
+  //     return {
+  //       ...plant,
+  //       position: {
+  //         x: xPosition,
+  //         y: yPosition,
+  //       },
+  //       scale: scaleFactor,
+  //     };
+  //   });
+  // };
 
+const getPlantPositions = () => {
+  const totalPlants = recommendedPlants.length;
+
+  // Calculate grid dimensions (as square as possible)
+  const columns = Math.ceil(Math.sqrt(totalPlants));
+  const rows = Math.ceil(totalPlants / columns);
+
+  // Define spacing for each cell in percentage (assuming 100x100 area)
+  const xSpacing = 100 / (columns + 1);
+  const ySpacing = 100 / (rows + 1);
+
+  return recommendedPlants.map((plant, index) => {
+    const row = Math.floor(index / columns);
+    const col = index % columns;
+
+    // Calculate position within the grid
+    const xPosition = (col + 1) * xSpacing;
+    const yPosition = (row + 1) * ySpacing;
+
+    // Scale based on plant size
+    const heightFactor = plant.size.height / 10;
+    const widthFactor = plant.size.width / 10;
+    const baseFactor = Math.min(Math.max((heightFactor + widthFactor) * 4, 10), 22);
+
+    // Density factor depending on garden size
+    const densityFactor = Math.min(1, Math.sqrt(gardenWidth * gardenHeight) / 10);
+    const scaleFactor = baseFactor * densityFactor;
+
+    return {
+      ...plant,
+      position: {
+        x: xPosition,
+        y: yPosition,
+      },
+      scale: scaleFactor,
+    };
+  });
+};
+
+  
   const plantPositions = getPlantPositions();
 
   const getClimateIcon = () => {
