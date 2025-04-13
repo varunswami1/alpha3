@@ -47,19 +47,19 @@ const plantData = {
   photos: [
     { 
       id: "p1", 
-      url: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", 
+      url: "/images/others/Seedling stage.jpeg", 
       date: "2024-04-30",
       caption: "Seedling stage"
     },
     { 
       id: "p2", 
-      url: "https://images.unsplash.com/photo-1596120236172-231999844ade?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", 
+      url: "/images/others/First flowers appearing.jpeg", 
       date: "2024-05-25",
       caption: "First flowers appearing"
     },
     { 
       id: "p3", 
-      url: "https://images.unsplash.com/photo-1588105783094-56cee2cc45e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", 
+      url: "/images/others/Developing fruits.jpeg", 
       date: "2024-06-20",
       caption: "Developing fruits"
     },
