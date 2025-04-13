@@ -14,6 +14,10 @@ interface PlantInfo {
   nextWatering: string;
 }
 
+const handleViewall = () => {
+  navigate('/my-garden');
+};
+
 const plants: PlantInfo[] = [
   {
     id: "1",
@@ -48,7 +52,9 @@ const PlantInformation = () => {
         <div className="flex justify-between items-center">
           <CardTitle>My Plants</CardTitle>
           <Link to="/my-garden">
-            <Button variant="outline" size="sm">
+            <Button 
+              onClick={handleViewall}
+              variant="outline" size="sm">
               View All
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
