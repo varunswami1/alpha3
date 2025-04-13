@@ -13,7 +13,7 @@ export const mockProducts: Product[] = [
     discountedPrice: 33.99,
     stockStatus: "In Stock",
     images: [
-      "🪴", "🌱", "🌿" // Using emojis as placeholders
+      "/images/others/Smart Self-Watering Pot1.webp", "/images/others/Smart Self-Watering Pot2.webp", "/images/others/Smart Self-Watering Pot3.jpg", "/images/others/Smart Self-Watering Pot4.jpg", "/images/others/Smart Self-Watering Pot5.webp"
     ],
     hasVideo: true,
     rating: 4.8,
@@ -35,7 +35,7 @@ export const mockProducts: Product[] = [
     discountedPrice: 24.99,
     stockStatus: "In Stock",
     images: [
-      "💧", "🧪", "🌱" // Using emojis as placeholders
+      "public/images/others/Organic Plant Food Concentrate1.jpg", "public/images/others/Organic Plant Food Concentrate2.jpg", "public/images/others/Organic Plant Food Concentrate3.jpg"
     ],
     hasVideo: false,
     rating: 4.5,
@@ -57,7 +57,7 @@ export const mockProducts: Product[] = [
     discountedPrice: 49.49,
     stockStatus: "Low Stock",
     images: [
-      "📱", "🌡️", "🔆" // Using emojis as placeholders
+      "/images/others/Plant Health Monitor1.jpg", "/images/others/Plant Health Monitor2.jpg", "/images/others/Plant Health Monitor3.jpg", "/images/others/Plant Health Monitor4.jpg", "/images/others/Plant Health Monitor5.jpg"
     ],
     hasVideo: true,
     rating: 4.7,
