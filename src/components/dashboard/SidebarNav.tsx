@@ -6,7 +6,6 @@ import {
   MessageCircle,
   Flower,
   Search,
-  Camera,
   ShoppingBag,
   Sprout,
 } from "lucide-react";
@@ -33,11 +32,6 @@ const navItems: NavItem[] = [
     label: "Plant Search",
     icon: Search,
     href: "/plant-search",
-  },
-  {
-    label: "Plant Camera",
-    icon: Camera,
-    href: "/camera",
   },
   {
     label: "Recommendations",
