@@ -28,6 +28,16 @@ const ProductDetails = ({
 }: ProductDetailsProps) => {
   return (
     <div className="space-y-6">
+      {/* Product Image */}
+      <div className="aspect-video bg-neutral-100 rounded-lg overflow-hidden">
+        <img 
+          src={product.images[0]} 
+          alt={product.name} 
+          className="w-full h-full object-cover" 
+        />
+      </div>
+
+      {/* Product Title & Rating */}
       <div>
         <h1 className="text-3xl font-bold">{product.name}</h1>
         <div className="flex items-center gap-2 mt-2">
@@ -38,7 +48,8 @@ const ProductDetails = ({
           <span className="text-sm text-neutral-500">({product.reviewsCount} reviews)</span>
         </div>
       </div>
-      
+
+      {/* Price & Discount */}
       <div className="flex items-center gap-3">
         {product.discount ? (
           <>
@@ -50,10 +61,14 @@ const ProductDetails = ({
           <span className="text-2xl font-bold">${product.price}</span>
         )}
       </div>
-      
+
+      {/* Stock & Shipping Info */}
       <div className="flex items-center gap-2">
-        <Badge variant={product.stockStatus === "In Stock" ? "default" : 
-          product.stockStatus === "Low Stock" ? "outline" : "destructive"} className="text-sm">
+        <Badge 
+          variant={product.stockStatus === "In Stock" ? "default" : 
+            product.stockStatus === "Low Stock" ? "outline" : "destructive"} 
+          className="text-sm"
+        >
           {product.stockStatus}
         </Badge>
         {product.freeShipping && (
@@ -63,9 +78,11 @@ const ProductDetails = ({
           </div>
         )}
       </div>
-      
+
+      {/* Description */}
       <p className="text-neutral-700">{product.description}</p>
-      
+
+      {/* Smart Features */}
       {product.smartFeatures.length > 0 && (
         <div className="space-y-2">
           <h3 className="font-medium">Smart Features:</h3>
@@ -79,7 +96,8 @@ const ProductDetails = ({
           </ul>
         </div>
       )}
-      
+
+      {/* Compatibility */}
       {product.compatibility.length > 0 && (
         <div className="space-y-2">
           <h3 className="font-medium">Compatible with:</h3>
@@ -90,7 +108,8 @@ const ProductDetails = ({
           </div>
         </div>
       )}
-      
+
+      {/* Quantity and Actions */}
       <div className="pt-4 space-y-4">
         <div className="flex items-center gap-4">
           <span className="font-medium">Quantity:</span>
@@ -108,7 +127,7 @@ const ProductDetails = ({
             >+</Button>
           </div>
         </div>
-        
+
         <div className="flex gap-3">
           <Button className="flex-1 gap-2" onClick={onAddToCart}>
             <ShoppingCart className="h-4 w-4" /> Add to Cart
@@ -118,7 +137,8 @@ const ProductDetails = ({
             <span className="sr-only">Add to wishlist</span>
           </Button>
         </div>
-        
+
+        {/* Additional Info Box */}
         <div className="bg-neutral-50 p-4 rounded-md space-y-3">
           <div className="flex items-center gap-2">
             <Truck className="h-5 w-5 text-primary" />
@@ -127,7 +147,7 @@ const ProductDetails = ({
               <p className="text-sm text-neutral-600">{product.deliveryEstimate}</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <ShieldCheck className="h-5 w-5 text-primary" />
             <div>
@@ -135,12 +155,14 @@ const ProductDetails = ({
               <p className="text-sm text-neutral-600">{product.warranty}</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Gift className="h-5 w-5 text-primary" />
             <div>
               <p className="font-medium">Loyalty Points</p>
-              <p className="text-sm text-neutral-600">Earn {product.loyaltyPoints} points with this purchase</p>
+              <p className="text-sm text-neutral-600">
+                Earn {product.loyaltyPoints} points with this purchase
+              </p>
             </div>
           </div>
         </div>
