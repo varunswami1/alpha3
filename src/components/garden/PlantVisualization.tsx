@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { plantDatabase } from "@/data/plantDatabase";
@@ -144,28 +145,75 @@ const PlantVisualization = ({ data, id }: PlantVisualizationProps) => {
   }, [data.location, preloadedImages]);
 
   const getPlantPositions = () => {
-    const gridCells = gardenWidth * gardenHeight;
-    const cellsPerPlant = Math.max(
-      1,
-      Math.floor(gridCells / recommendedPlants.length)
-    );
+    // const gridCells = gardenWidth * gardenHeight;
+    // const cellsPerPlant = Math.max(
+    //   1,
+    //   Math.floor(gridCells / recommendedPlants.length)
+    // );
 
+      // Define regions for plant placement
+     const regions = [
+       // Corners
+       { x: 10, y: 10 },       // Top-left
+       { x: 90, y: 10 },       // Top-right
+       { x: 10, y: 90 },       // Bottom-left
+       { x: 90, y: 90 },       // Bottom-right
+       // Edges
+       { x: 50, y: 10 },       // Top-middle
+       { x: 90, y: 50 },       // Right-middle
+       { x: 50, y: 90 },       // Bottom-middle
+       { x: 10, y: 50 },       // Left-middle
+       // Center
+       { x: 50, y: 50 },       // Center
+       // Additional regions for more plants
+       { x: 30, y: 30 },       // Upper-left quadrant
+       { x: 70, y: 30 },       // Upper-right quadrant
+       { x: 30, y: 70 },       // Lower-left quadrant
+       { x: 70, y: 70 },       // Lower-right quadrant
+       { x: 30, y: 50 },       // Middle-left
+       { x: 70, y: 50 },       // Middle-right
+       { x: 50, y: 30 },       // Middle-top
+       { x: 50, y: 70 },       // Middle-bottom
+     ];
+    
     return recommendedPlants.map((plant, index) => {
+        // Cycle through regions based on plant index
+       const regionIndex = index % regions.length;
+       const basePosition = regions[regionIndex];
+       
+       // Add a small random offset for natural positioning
+       const randomOffset = 7;
+       const xRandom = Math.random() * randomOffset * 2 - randomOffset;
+       const yRandom = Math.random() * randomOffset * 2 - randomOffset;
+       
+       const xPosition = basePosition.x + xRandom;
+       const yPosition = basePosition.y + yRandom;
+       
+       // Scale based on plant size, but within reasonable bounds
       const heightFactor = plant.size.height / 10;
-      const cellIndex = index * cellsPerPlant;
-      const row = Math.floor(cellIndex / gardenWidth);
-      const col = cellIndex % gardenWidth;
-      const xRandom = Math.random() * 0.8 - 0.4;
-      const yRandom = Math.random() * 0.8 - 0.4;
-      const xPosition = 10 + ((col + xRandom) / gardenWidth) * 80;
-      const yPosition = 10 + ((row + yRandom) / gardenHeight) * 80;
-      const widthPercent = (plant.size.width / gardenWidth) * 70;
-      const heightPercent = (plant.size.height / gardenHeight) * 70;
-      const scaleFactor = Math.min(
-        Math.max(widthPercent, heightPercent, 15),
-        45
-      );
+      // const cellIndex = index * cellsPerPlant;
+      // const row = Math.floor(cellIndex / gardenWidth);
+      // const col = cellIndex % gardenWidth;
+      // const xRandom = Math.random() * 0.8 - 0.4;
+      // const yRandom = Math.random() * 0.8 - 0.4;
+      // const xPosition = 10 + ((col + xRandom) / gardenWidth) * 80;
+      // const yPosition = 10 + ((row + yRandom) / gardenHeight) * 80;
+      // const widthPercent = (plant.size.width / gardenWidth) * 70;
+      // const heightPercent = (plant.size.height / gardenHeight) * 70;
+      // const scaleFactor = Math.min(
+      //   Math.max(widthPercent, heightPercent, 15),
+      //   45
+      // );
 
+      const widthFactor = plant.size.width / 10;
+       
+       // Calculate scale factor based on plant dimensions
+       const baseFactor = Math.min(Math.max((heightFactor + widthFactor) * 5, 12), 25); 
+       
+       // For smaller gardens, scale plants accordingly
+       const densityFactor = Math.min(1, Math.sqrt(gardenWidth * gardenHeight) / 10);
+       const scaleFactor = baseFactor * densityFactor;
+      
       return {
         ...plant,
         position: {
