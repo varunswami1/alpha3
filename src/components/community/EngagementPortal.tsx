@@ -44,7 +44,7 @@ const EngagementPortal = () => {
         avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop",
       },
       content: "Just planted my first batch of organic tomatoes! 🍅 Using the companion planting technique with basil to keep pests away naturally. Can't wait to see them grow! Any tips for keeping them healthy during the summer?",
-      image: "https://images.unsplash.com/photo-1592419044707-20d4598f34ef?q=80&w=2940&auto=format&fit=crop",
+      image: "/images/others/jane smith.jpeg",
       timestamp: "2 hours ago",
       likes: 24,
       comments: 5,
