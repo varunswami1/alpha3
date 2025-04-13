@@ -18,7 +18,7 @@ const GardeningInfo = () => {
       title: "Watering Reminders",
       description: "Receive timely notifications when your plants need water, preventing both under and over-watering."
     },
-    {
+    /*{
       icon: <Sun className="w-10 h-10 text-green-600" />,
       title: "Sunlight Tracking",
       description: "Monitor how much sunlight your garden receives and get recommendations for optimal plant placement."
@@ -32,7 +32,7 @@ const GardeningInfo = () => {
       icon: <Leaf className="w-10 h-10 text-green-600" />,
       title: "Plant Health Monitoring",
       description: "Identify plant diseases and nutrient deficiencies early with our AI-powered plant health scanner."
-    }
+    }*/
   ];
 
   return (
