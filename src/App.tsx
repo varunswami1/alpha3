@@ -32,19 +32,17 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-              <ProtectedRoute>
-              <Route path="/community" element={<Community />} />
-              <Route path="/garden" element={<Garden />} />
-              <Route path="/plant/:id" element={<PlantProfile />} />
-              <Route path="/plant-search" element={<PlantSearch />} />
-              <Route path="/plant-info/:id" element={<PlantInfoPage />} />
-              <Route path="/plant-recommendation" element={<PlantRecommendation />}/>
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/profile" element={<UserProfile />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/shop/:id" element={<Shop />} />
-            </ProtectedRoute>
+            <Route path="/dashboard" element={<ProtectedRoute><Dashboard />} />
+            <Route path="/community" element={<ProtectedRoute><Community /> </ProtectedRoute>} />
+            <Route path="/garden" element={<ProtectedRoute><Garden /> </ProtectedRoute>} />
+            <Route path="/plant/:id" element={<ProtectedRoute><PlantProfile /> </ProtectedRoute>} />
+            <Route path="/plant-search" element={<ProtectedRoute><PlantSearch /> </ProtectedRoute>} />
+            <Route path="/plant-info/:id" element={<ProtectedRoute><PlantInfoPage /> </ProtectedRoute>} />
+            <Route path="/plant-recommendation" element={<ProtectedRoute><PlantRecommendation /> </ProtectedRoute>}/>
+            <Route path="/settings" element={<ProtectedRoute><Settings /> </ProtectedRoute>} />
+            <Route path="/profile" element={<ProtectedRoute><UserProfile /> </ProtectedRoute>} />
+            <Route path="/shop" element={<ProtectedRoute><Shop /> </ProtectedRoute>} />
+            <Route path="/shop/:id" element={<ProtectedRoute><Shop /> </ProtectedRoute>} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
