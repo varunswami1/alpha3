@@ -18,21 +18,21 @@ const LearningResources = () => {
     {
       id: 1,
       title: "Getting Started with Gardening",
-      thumbnail: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2942&auto=format&fit=crop",
+      thumbnail: "/images/others/Getting Started with Gardening.jpeg",
       duration: "15 min",
       description: "Learn the basics of setting up your first garden."
     },
     {
       id: 2,
       title: "Seasonal Planting Guide",
-      thumbnail: "https://images.unsplash.com/photo-1557844352-761f2565b576?q=80&w=2940&auto=format&fit=crop",
+      thumbnail: "/images/others/Seasonal Planting Guide.jpg",
       duration: "12 min",
       description: "Understand what to plant during different seasons."
     },
     {
       id: 3,
       title: "Organic Pest Control",
-      thumbnail: "https://images.unsplash.com/photo-1599685315640-9ceec5d4f0cf?q=80&w=2942&auto=format&fit=crop",
+      thumbnail: "/images/others/Organic Pest Control.jpg",
       duration: "18 min",
       description: "Natural ways to keep pests away from your garden."
     }
