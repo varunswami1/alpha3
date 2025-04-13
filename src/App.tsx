@@ -32,8 +32,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <ProtectedRoute>
-              <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+              <ProtectedRoute>
               <Route path="/community" element={<Community />} />
               <Route path="/garden" element={<Garden />} />
               <Route path="/plant/:id" element={<PlantProfile />} />
