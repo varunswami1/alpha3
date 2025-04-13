@@ -31,11 +31,11 @@ const plantData = {
   health: 85,
   lifeCycleStage: "Fruiting",
   lifeCycleProgress: 65,
-  plantedDate: "2023-04-15",
-  germinationDate: "2023-04-22",
-  floweringDate: "2023-05-20",
-  fruitingDate: "2023-06-15",
-  harvestDate: "2023-07-30",
+  plantedDate: "2024-04-15",
+  germinationDate: "2024-04-22",
+  floweringDate: "2024-05-20",
+  fruitingDate: "2024-06-15",
+  harvestDate: "2024-07-30",
   wateringNeeds: "medium",
   wateringFrequency: "Every 2-3 days",
   wateringAmount: "1 inch per week",
@@ -48,19 +48,19 @@ const plantData = {
     { 
       id: "p1", 
       url: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", 
-      date: "2023-04-30",
+      date: "2024-04-30",
       caption: "Seedling stage"
     },
     { 
       id: "p2", 
       url: "https://images.unsplash.com/photo-1596120236172-231999844ade?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", 
-      date: "2023-05-25",
+      date: "2024-05-25",
       caption: "First flowers appearing"
     },
     { 
       id: "p3", 
       url: "https://images.unsplash.com/photo-1588105783094-56cee2cc45e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", 
-      date: "2023-06-20",
+      date: "2024-06-20",
       caption: "Developing fruits"
     },
   ],
@@ -70,14 +70,14 @@ const plantData = {
       type: "weather",
       title: "Frost Warning",
       description: "Temperatures expected to drop below freezing tonight. Consider covering or moving your plants indoors.",
-      date: "2023-06-02"
+      date: "2024-06-02"
     },
     {
       id: "a2",
       type: "disease",
       title: "Powdery Mildew Alert",
       description: "Cases of powdery mildew reported in your area. Inspect leaves regularly and treat preventatively.",
-      date: "2023-06-10"
+      date: "2024-06-10"
     }
   ],
   notes: [
@@ -85,13 +85,13 @@ const plantData = {
       id: "n1",
       title: "Pruning",
       content: "Removed suckers and lower branches to improve air circulation.",
-      date: "2023-05-10"
+      date: "2024-05-10"
     },
     {
       id: "n2",
       title: "Fertilizing",
       content: "Applied organic tomato fertilizer.",
-      date: "2023-05-25"
+      date: "2024-05-25"
     }
   ]
 };
