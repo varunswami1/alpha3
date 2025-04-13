@@ -14,7 +14,6 @@ import Garden from "./pages/Garden";
 import PlantProfile from "./components/garden/PlantProfile";
 import PlantSearch from "./pages/PlantSearch";
 import PlantInfoPage from "./components/search/PlantInfoPage";
-import Camera from "./pages/Camera";
 import Settings from "./pages/Settings";
 import UserProfile from "./pages/UserProfile";
 import Shop from "./pages/Shop";
@@ -47,7 +46,6 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
-            <Route path="/camera" element={<Camera />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/profile" element={<UserProfile />} />
             <Route path="/shop" element={<Shop />} />
