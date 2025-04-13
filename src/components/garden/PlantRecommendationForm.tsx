@@ -54,11 +54,11 @@ const PlantRecommendationForm = ({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      area: 100,
+      area: 500,
       climate: "moderate",
       humidity: 50,
       sunlight: "partial",
-      plantCategory: "succulents",
+      plantCategory: "flowers",
       location: "garden", // Default location
     },
   });
