@@ -20,7 +20,7 @@ const plants: PlantInfo[] = [
     name: "Tomato Plant",
     image: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     type: "Vegetable",
-    plantedDate: "2023-04-15",
+    plantedDate: "2025-01-15",
     nextWatering: "Today",
   },
   {
@@ -28,7 +28,7 @@ const plants: PlantInfo[] = [
     name: "Rose Bush",
     image: "https://images.unsplash.com/photo-1496861083958-175bb1bd5702?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     type: "Flower",
-    plantedDate: "2023-03-10",
+    plantedDate: "2025-01-10",
     nextWatering: "Tomorrow",
   },
   {
@@ -36,7 +36,7 @@ const plants: PlantInfo[] = [
     name: "Basil",
     image: "https://images.unsplash.com/photo-1627848837484-a2751fc4c474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     type: "Herb",
-    plantedDate: "2023-05-02",
+    plantedDate: "2025-01-02",
     nextWatering: "In 2 days",
   },
 ];
