@@ -112,7 +112,7 @@ const plantsData = [
     description: "An aromatic perennial plant known for its beautiful purple flowers and calming scent.",
     category: "Flower",
     difficulty: "Medium",
-    image: "https://images.unsplash.com/photo-1523379037331-82cbcda55050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "/images/others/lavender.jpeg",
     waterNeeds: "low",
     sunlightNeeds: "full",
     growthTime: "1-3 years to mature",
