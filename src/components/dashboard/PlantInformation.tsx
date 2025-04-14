@@ -38,7 +38,7 @@ const plants: PlantInfo[] = [
   {
     id: "3",
     name: "Basil",
-    image: "https://images.unsplash.com/photo-1627848837484-a2751fc4c474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "/images/others/basil.jpeg",
     type: "Herb",
     plantedDate: "2025-01-02",
     nextWatering: "In 2 days",
@@ -51,7 +51,7 @@ const PlantInformation = () => {
       <CardHeader>
         <div className="flex justify-between items-center">
           <CardTitle>My Plants</CardTitle>
-          <Link to="/my-garden">
+          <Link to="/garden">
             <Button 
               onClick={handleViewall}
               variant="outline" size="sm">
