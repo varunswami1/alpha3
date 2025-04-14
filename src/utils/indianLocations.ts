@@ -697,10 +697,16 @@ export const indianStates = [
        
   
   // This function returns districts for a given state
-  export const getDistricts = (state: string): string[] => {
-    return stateDistricts[state] || [];
-  };
-  
+  // export const getDistricts = (state: string): string[] => {
+  //   return stateDistricts[state] || [];
+  // };
+
+export function getDistricts(stateName: string): string[] {
+  const match = stateDistricts.find(entry => entry.state === stateName);
+  return match ? match.districts : [];
+};
+
+
   // This is a simplified city list function
   // In a real app, this would be connected to a comprehensive API
   export const getCities = (district: string): string[] => {
