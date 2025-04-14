@@ -17,14 +17,12 @@ interface ProductDetailsProps {
   product: Product;
   quantity: number;
   setQuantity: (quantity: number) => void;
-  onAddToCart: () => void;
 }
 
 const ProductDetails = ({ 
   product, 
   quantity, 
-  setQuantity, 
-  onAddToCart 
+  setQuantity
 }: ProductDetailsProps) => {
   return (
     <div className="space-y-6">
@@ -129,9 +127,15 @@ const ProductDetails = ({
         </div>
 
         <div className="flex gap-3">
-          <Button className="flex-1 gap-2" onClick={onAddToCart}>
-            <ShoppingCart className="h-4 w-4" /> Add to Cart
-          </Button>
+          <a 
+            href={product.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
+          >
+            <ShoppingCart className="h-4 w-4" />
+            View Product
+          </a>
           <Button variant="outline" size="icon" className="rounded-full">
             <Heart className="h-4 w-4" />
             <span className="sr-only">Add to wishlist</span>
