@@ -256,12 +256,6 @@ const Navigation = () => {
           >
             Recommendations
           </Link>
-          <Link
-            to="/shop"
-            className="text-neutral-600 hover:text-primary transition-colors font-medium"
-          >
-            Shop
-          </Link>
         </div>
 
         {/* Right side elements */}
