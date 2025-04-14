@@ -17,6 +17,7 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [showTerms, setShowTerms] = useState(false); 
 
   // Get the redirect path if any
   const from = location.state?.from?.pathname || "/dashboard";
@@ -177,7 +178,7 @@ const Login = () => {
                 required
               />
             </div>
-
+            
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 h-5 w-5" />
               <Input
@@ -190,22 +191,47 @@ const Login = () => {
               />
             </div>
           </div>
-
-          <div className="flex items-center space-x-2">
-            <Checkbox
-              id="terms"
-              checked={agreedToTerms}
-              onCheckedChange={(checked) => setAgreedToTerms(checked === true)}
-            />
-            <label
-              htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              I agree to the{" "}
-              <a href="#" className="text-primary hover:underline">
-                Terms and Conditions
-              </a>
-            </label>
+          
+          <div className="space-y-2">
+            <div className="flex items-start space-x-3">
+              <Checkbox
+                id="terms"
+                checked={agreedToTerms}
+                onCheckedChange={(checked) => setAgreedToTerms(checked === true)}
+              />
+              <label
+                htmlFor="terms"
+                className="text-sm font-medium leading-none"
+              >
+                I agree to the{" "}
+                <button
+                  type="button"
+                  onClick={() => setShowTerms(!showTerms)}
+                  className="text-primary hover:underline"
+                >
+                  Terms and Conditions
+                </button>
+              </label>
+            </div>    
+            {showTerms && (
+              <div className="text-sm bg-gray-100 rounded-md p-3 max-h-60 overflow-auto border">
+                <h3 className="font-semibold mb-2">Terms & Conditions</h3>
+                <p className="mb-2">
+                  By using this application, you agree to provide accurate information and not misuse the platform.
+                  We are not liable for data loss, unauthorized access, or technical disruptions.
+                </p>
+                <p className="mb-2">
+                  You must comply with all applicable laws while using the app. All user data is handled according to
+                  our privacy policy. You consent to allow us to store and process your data as described.
+                </p>
+                <p className="mb-2">
+                  Violation of these terms may result in suspension or permanent ban from the service.
+                </p>
+                <p>
+                  These terms may be updated from time to time. It is your responsibility to check for changes.
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="space-y-4">
