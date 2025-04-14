@@ -5,29 +5,8 @@ import { Product, Review } from "@/types/shop";
 export const mockProducts: Product[] = [
   {
     id: "1",
-    name: "Smart Self-Watering Pot",
-    category: "Pots",
-    description: "Never forget to water your plants again! This smart pot monitors soil moisture and waters automatically when needed. Includes a mobile app for remote monitoring and customization.",
-    price: 39.99,
-    discount: "15% off",
-    discountedPrice: 33.99,
-    stockStatus: "In Stock",
-    images: [
-      "/images/others/Smart Self-Watering Pot1.webp", "/images/others/Smart Self-Watering Pot2.webp", "/images/others/Smart Self-Watering Pot3.jpg", "/images/others/Smart Self-Watering Pot4.jpg", "/images/others/Smart Self-Watering Pot5.webp"
-    ],
-    hasVideo: true,
-    rating: 4.8,
-    reviewsCount: 124,
-    smartFeatures: ["Mobile app", "Moisture sensing", "Auto-watering", "Low water alerts"],
-    compatibility: ["iOS", "Android", "Alexa", "Google Home"],
-    deliveryEstimate: "2-3 business days",
-    freeShipping: true,
-    warranty: "1 year manufacturer warranty",
-    loyaltyPoints: 100
-  },
-  {
-    id: "2",
     name: "Organic Plant Food Concentrate",
+    link: "https://www.amazon.com/Compressed-Organic-Potting-Soil-Nutrient-Dense/dp/B0C2F8Y9RR?th=1",
     category: "Fertilizers",
     description: "100% organic plant food that promotes healthy growth and vibrant blooms. Concentrated formula means a little goes a long way. Safe for all houseplants and outdoor gardens.",
     price: 24.99,
@@ -48,8 +27,9 @@ export const mockProducts: Product[] = [
     loyaltyPoints: 50
   },
   {
-    id: "3",
+    id: "2",
     name: "Plant Health Monitor",
+    link: "https://www.amazon.com/dp/B0CNVPM3FW/?tag=audite-20",
     category: "Sensors",
     description: "Keep track of your plant's vital stats with this advanced sensor. Monitors light, moisture, temperature, and nutrients. Sync with your smartphone for real-time updates and personalized care recommendations.",
     price: 54.99,
@@ -68,6 +48,29 @@ export const mockProducts: Product[] = [
     freeShipping: true,
     warranty: "2 year manufacturer warranty",
     loyaltyPoints: 120
+  },
+    {
+    id: "3",
+    name: "Smart Self-Watering Pot",
+    link: "https://www.yankodesign.com/2021/12/09/this-smart-self-watering-indoor-planter-is-a-futuristic-appliance-that-is-almost-sculptural-in-nature/",
+    category: "Pots",
+    description: "Never forget to water your plants again! This smart pot monitors soil moisture and waters automatically when needed. Includes a mobile app for remote monitoring and customization.",
+    price: 39.99,
+    discount: "15% off",
+    discountedPrice: 33.99,
+    stockStatus: "In Stock",
+    images: [
+      "/images/others/Smart Self-Watering Pot1.webp", "/images/others/Smart Self-Watering Pot2.webp", "/images/others/Smart Self-Watering Pot3.jpg", "/images/others/Smart Self-Watering Pot4.jpg", "/images/others/Smart Self-Watering Pot5.webp"
+    ],
+    hasVideo: true,
+    rating: 4.8,
+    reviewsCount: 124,
+    smartFeatures: ["Mobile app", "Moisture sensing", "Auto-watering", "Low water alerts"],
+    compatibility: ["iOS", "Android", "Alexa", "Google Home"],
+    deliveryEstimate: "2-3 business days",
+    freeShipping: true,
+    warranty: "1 year manufacturer warranty",
+    loyaltyPoints: 100
   }
 ];
 
