@@ -38,8 +38,48 @@ const LearningResources = () => {
       duration: "30 min",
       description: "Natural ways to keep pests away from your garden.",
       videoId: "_1BdRzoN-50"
+    },
+    {
+      id: 4,
+      title: "Plant Propagation for Beginners",
+      thumbnail: "https://i.ytimg.com/vi/WHiv1OvXGcI/maxresdefault.jpg",
+      duration: "12 min",
+      description: "Learn 4 simple methods to propagate plants and multiply your garden easily.",
+      videoId: "WHiv1OvXGcI"
+    },
+    {
+      id: 5,
+      title: "Indoor Plant Care Basics",
+      thumbnail: "https://i.ytimg.com/vi/IbWCleprbkU/maxresdefault.jpg",
+      duration: "15 min",
+      description: "Essential tips for watering, lighting and maintaining healthy indoor plants.",
+      videoId: "IbWCleprbkU"
+    },
+    {
+      id: 6,
+      title: "How to Repot Plants Correctly",
+      thumbnail: "https://i.ytimg.com/vi/fqF7dYpqU28/maxresdefault.jpg",
+      duration: "8 min",
+      description: "Step-by-step guide to repotting plants without damaging roots.",
+      videoId: "fqF7dYpqU28"
+    },
+    {
+      id: 7,
+      title: "Gardening for Beginners: Plants, Soil and Pro Tips",
+      thumbnail: "https://i.ytimg.com/vi/H1yh2euwhBc/hqdefault.jpg",
+      duration: "14 min",
+      description: "An easy guide to plant care basics, choosing soil, and practical gardening tips for beginners.",
+      videoId: "H1yh2euwhBc"
+    },
+    {
+      id: 8,
+      title: "Pruning Plants is 10x Easier When You Know This",
+      thumbnail: "https://i.ytimg.com/vi/ypuVwJN33Vk/hqdefault.jpg",
+      duration: "9 min",
+      description: "Learn smart pruning tips to keep your plants healthy, encourage growth, and prevent disease.",
+      videoId: "ypuVwJN33Vk"
     }
-  ];
+];
 
   const guides = [
     {
@@ -65,7 +105,31 @@ const LearningResources = () => {
         "Learn to harvest correctly",
         "Extend your growing season"
       ]
-    }
+    },
+    {
+  id: 3,
+  title: "Herb Garden Guide",
+  image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=2940&auto=format&fit=crop",
+  steps: [
+    "Choose easy herbs like basil, mint, coriander",
+    "Ensure 4-6 hours of sunlight",
+    "Use well-draining soil",
+    "Trim regularly to promote growth",
+    "Harvest leaves correctly"
+  ]
+  },
+ {
+  id: 4,
+  title: "Balcony Gardening Guide",
+  image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2940&auto=format&fit=crop",
+  steps: [
+    "Use vertical space with shelves and hangers",
+    "Select pots with proper drainage",
+    "Choose compact plants",
+    "Water carefully to avoid overflow",
+    "Rotate plants for even sunlight"
+    ]
+   }
   ];
 
   const essentials = [
