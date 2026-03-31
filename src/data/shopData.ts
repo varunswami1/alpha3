@@ -1,4 +1,3 @@
-
 import { Product, Review } from "@/types/shop";
 
 // Mock data for the shop products
