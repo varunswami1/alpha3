@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -267,10 +266,7 @@ const plantData = [
   type: "Succulent",
   scientificName: "Aloe barbadensis miller",
   description: "A medicinal succulent plant known for its thick, fleshy leaves filled with soothing gel used for skin care and healing.",
-  images: [
-    "https://images.unsplash.com/photo-1593691509543-c55fb32e5b2c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1587502536263-9298c8c9d68d?auto=format&fit=crop&w=800&q=80",
-  ],
+  images: ["/images/searchimages/aloe.jpeg"],
   health: 95,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 60,
@@ -325,10 +321,7 @@ const plantData = [
   type: "Indoor Plant",
   scientificName: "Epipremnum aureum",
   description: "A popular indoor plant believed to bring prosperity. It has heart-shaped leaves and grows easily in water or soil.",
-  images: [
-    "https://images.unsplash.com/photo-1598899134739-24c46f58a5c5?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=800&q=80",
-  ],
+  images: ["/images/searchimages/money-plant.jpeg"],
   health: 90,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 55,
@@ -348,13 +341,14 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Money plant cutting.jpeg",
+      url:"/images/searchimages/money-plant.jpeg",
+
       date: "2024-02-20",
       caption: "Water propagation"
     },
     {
       id: "p2",
-      url: "/images/others/Money plant growth.jpeg",
+      url:  "/images/searchimages/money-plant.jpeg",
       date: "2024-03-25",
       caption: "Healthy growth"
     }
@@ -383,10 +377,7 @@ const plantData = [
   type: "Medicinal Herb",
   scientificName: "Ocimum tenuiflorum",
   description: "A sacred medicinal plant in India, Tulsi is known for its healing properties and aromatic leaves used in herbal remedies.",
-  images: [
-    "https://images.unsplash.com/photo-1602330102258-3f3d8e3dfcc5?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1628168337639-0e7b4dbe1b68?auto=format&fit=crop&w=800&q=80",
-  ],
+  images:["/images/searchimages/tulsi.jpeg"],
   health: 92,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 60,
@@ -406,13 +397,13 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Tulsi young.jpeg",
+      url:  "/images/searchimages/tulsi.jpeg",
       date: "2024-03-15",
       caption: "Young Tulsi plant"
     },
     {
       id: "p2",
-      url: "/images/others/Tulsi growth.jpeg",
+      url:  "/images/searchimages/tulsi.jpeg",
       date: "2024-04-10",
       caption: "Healthy growth"
     }
@@ -441,10 +432,7 @@ const plantData = [
   type: "Medicinal Tree",
   scientificName: "Azadirachta indica",
   description: "A highly valued medicinal tree known for its antibacterial properties and use in organic pest control.",
-  images: [
-    "https://images.unsplash.com/photo-1616587226963-5c0b3c8c1d32?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&w=800&q=80",
-  ],
+  images:["/images/searchimages/neem.jpeg"],
   health: 94,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 65,
@@ -464,13 +452,13 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Neem sapling.jpeg",
+      url: "/images/searchimages/neem.jpeg",
       date: "2023-07-10",
       caption: "Young neem plant"
     },
     {
       id: "p2",
-      url: "/images/others/Neem tree.jpeg",
+      url: "/images/searchimages/neem.jpeg",
       date: "2024-04-15",
       caption: "Growing tree"
     }
@@ -499,10 +487,7 @@ const plantData = [
   type: "Flowering Plant",
   scientificName: "Orchidaceae",
   description: "An elegant and exotic flowering plant known for its stunning, long-lasting blooms. Orchids are perfect for indoor decoration and add a luxurious touch to any space.",
-  images: [
-    "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1524594154908-edd94f6c36e3?auto=format&fit=crop&w=800&q=80",
-  ],
+  images: ["/images/searchimages/orchid.jpeg"],
   health: 87,
   lifeCycleStage: "Flowering",
   lifeCycleProgress: 75,
@@ -522,7 +507,7 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Orchid bloom.jpeg",
+      url: "/images/searchimages/orchid.jpeg",
       date: "2024-03-15",
       caption: "Beautiful bloom"
     }
@@ -551,10 +536,7 @@ const plantData = [
   type: "Flowering Herb",
   scientificName: "Lavandula",
   description: "A fragrant and visually appealing plant known for its purple flowers. Lavender is used in aromatherapy, decoration, and herbal products.",
-  images: [
-    "https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1504983875-d3b7e3b74d95?auto=format&fit=crop&w=800&q=80",
-  ],
+  images:["/images/searchimages/lavender.jpeg"],
   health: 91,
   lifeCycleStage: "Flowering",
   lifeCycleProgress: 70,
@@ -574,7 +556,7 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Lavender field.jpeg",
+      url: "/images/searchimages/lavender.jpeg",
       date: "2024-05-10",
       caption: "Blooming lavender"
     }
@@ -603,10 +585,7 @@ const plantData = [
   type: "Flowering Plant",
   scientificName: "Helianthus annuus",
   description: "A bright and cheerful plant known for its large yellow blooms that follow the sun. Sunflowers add vibrant color and positivity to any garden.",
-  images: [
-    "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1470509037663-253afd7f0f51?auto=format&fit=crop&w=800&q=80",
-  ],
+  images:["/images/searchimages/sunflower.jpeg"],
   health: 93,
   lifeCycleStage: "Flowering",
   lifeCycleProgress: 80,
@@ -626,7 +605,7 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Sunflower bloom.jpeg",
+      url: "/images/searchimages/sunflower.jpeg",
       date: "2024-06-01",
       caption: "Full bloom sunflower"
     }
@@ -655,10 +634,7 @@ const plantData = [
   type: "Succulent",
   scientificName: "Cactaceae",
   description: "A low-maintenance desert plant with a modern aesthetic. Cactus stores water in its thick stems and requires minimal care.",
-  images: [
-    "https://images.unsplash.com/photo-1501004318641-3f3d7c3b3c2a?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1524594154908-edd94f6c36e3?auto=format&fit=crop&w=800&q=80",
-  ],
+  images: ["/images/searchimages/cactus.jpeg"],
   health: 97,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 50,
@@ -678,7 +654,7 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Cactus pot.jpeg",
+      url:  "/images/searchimages/cactus.jpeg",
       date: "2024-02-01",
       caption: "Indoor cactus"
     }
@@ -707,10 +683,7 @@ const plantData = [
   type: "Indoor Plant",
   scientificName: "Sansevieria trifasciata",
   description: "A stylish and hardy indoor plant known for its upright leaves and air-purifying qualities. Perfect for modern home decor.",
-  images: [
-    "https://images.unsplash.com/photo-1593691512421-1e9b8c0c5a4d?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1616627981454-1a5e5c5bdb9b?auto=format&fit=crop&w=800&q=80",
-  ],
+  images:["/images/searchimages/snake-plant.jpeg"],
   health: 96,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 55,
@@ -730,7 +703,7 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Snake plant indoor.jpeg",
+      url: "/images/searchimages/snake-plant.jpeg",
       date: "2024-02-01",
       caption: "Indoor placement"
     }
@@ -759,10 +732,7 @@ const plantData = [
   type: "Fruit Plant",
   scientificName: "Fragaria × ananassa",
   description: "A small fruit plant producing sweet and juicy strawberries. Ideal for home gardens and containers.",
-  images: [
-    "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80",
-  ],
+  images:["/images/searchimages/strawberry.jpeg"],
   health: 89,
   lifeCycleStage: "Fruiting",
   lifeCycleProgress: 70,
@@ -782,7 +752,7 @@ const plantData = [
   photos: [
     {
       id: "p1",
-      url: "/images/others/Strawberry fruit.jpeg",
+      url: "/images/searchimages/strawberry.jpeg",
       date: "2024-05-10",
       caption: "Fruiting stage"
     }
@@ -811,10 +781,7 @@ const plantData = [
   type: "Flowering Plant",
   scientificName: "Hibiscus rosa-sinensis",
   description: "A tropical flowering plant with large, colorful blooms, commonly used in decoration and herbal uses.",
-  images: [
-    "https://images.unsplash.com/photo-1597848212624-e6c0c1c9d1d5?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1563201515-adbe35c669c0?auto=format&fit=crop&w=800&q=80"
-  ],
+  images:["/images/searchimages/hibiscus.jpeg"],
   health: 91,
   lifeCycleStage: "Flowering",
   lifeCycleProgress: 75,
@@ -832,7 +799,7 @@ const plantData = [
   soilpH: "6.0-7.0",
   fertilizingSchedule: "Every 2 weeks",
   photos: [
-    { id: "p1", url: "/images/others/Hibiscus bloom.jpeg", date: "2024-04-20", caption: "Blooming hibiscus" }
+    { id: "p1", url: "/images/searchimages/hibiscus.jpeg", date: "2024-04-20", caption: "Blooming hibiscus" }
   ],
   alerts: [
     {
@@ -871,10 +838,7 @@ const plantData = [
   type: "Fruit Plant",
   scientificName: "Musa",
   description: "A fast-growing tropical plant producing bananas. Requires warm climate and high water supply.",
-  images: [
-    "https://images.unsplash.com/photo-1574226516831-e1dff420e42e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1604908177522-432d5cdbde1c?auto=format&fit=crop&w=800&q=80"
-  ],
+  images: ["/images/searchimages/banana.jpeg"],
   health: 93,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 60,
@@ -892,7 +856,7 @@ const plantData = [
   soilpH: "5.5-7.0",
   fertilizingSchedule: "Monthly",
   photos: [
-    { id: "p1", url: "/images/others/Banana plant.jpeg", date: "2024-05-01", caption: "Growing banana plant" }
+    { id: "p1", url:  "/images/searchimages/banana.jpeg", date: "2024-05-01", caption: "Growing banana plant" }
   ],
   alerts: [
     {
@@ -931,10 +895,7 @@ const plantData = [
   type: "Fruit Tree",
   scientificName: "Mangifera indica",
   description: "A tropical fruit tree famous for producing sweet and juicy mangoes. Requires warm climate and proper seasonal care.",
-  images: [
-    "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1590080877777-98a0b3c3f3c2?auto=format&fit=crop&w=800&q=80"
-  ],
+  images: ["/images/searchimages/mango.jpeg"],
   health: 94,
   lifeCycleStage: "Fruiting",
   lifeCycleProgress: 80,
@@ -952,7 +913,7 @@ const plantData = [
   soilpH: "5.5-7.5",
   fertilizingSchedule: "Every 2 months",
   photos: [
-    { id: "p1", url: "/images/others/Mango fruit.jpeg", date: "2024-05-20", caption: "Mango fruiting stage" }
+    { id: "p1", url:  "/images/searchimages/mango.jpeg", date: "2024-05-20", caption: "Mango fruiting stage" }
   ],
   alerts: [
     {
@@ -991,10 +952,7 @@ const plantData = [
   type: "Herb",
   scientificName: "Coriandrum sativum",
   description: "A fast-growing herb used widely in cooking for its fresh leaves and seeds.",
-  images: [
-    "https://images.unsplash.com/photo-1589927986089-35812388d1d4?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1604908554097-30b7c8a3c6d2?auto=format&fit=crop&w=800&q=80"
-  ],
+  images: ["/images/searchimages/coriander.jpeg"],
   health: 89,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 55,
@@ -1012,7 +970,8 @@ const plantData = [
   soilpH: "6.2-6.8",
   fertilizingSchedule: "Every 3 weeks",
   photos: [
-    { id: "p1", url: "/images/others/Coriander leaves.jpeg", date: "2024-03-25", caption: "Fresh leaves" }
+    {
+      id: "p1", url:  "/images/searchimages/coriander.jpeg", date: "2024-03-25", caption: "Fresh leaves" }
   ],
   alerts: [
     {
@@ -1038,9 +997,7 @@ const plantData = [
   type: "Flowering Plant",
   scientificName: "Tagetes",
   description: "A bright flowering plant used for decoration and pest control in gardens.",
-  images: [
-    "https://images.unsplash.com/photo-1501004318641-3f3d7c3b3c2a?auto=format&fit=crop&w=800&q=80"
-  ],
+  images: ["/images/searchimages/marigold.jpeg"],
   health: 92,
   lifeCycleStage: "Flowering",
   lifeCycleProgress: 70,
@@ -1057,7 +1014,9 @@ const plantData = [
   soilType: "Well-drained soil",
   soilpH: "6.0-7.5",
   fertilizingSchedule: "Monthly",
-  photos: [],
+  photos:[
+    { id: "p1", url: "/images/searchimages/marigold.jpeg", date: "2024-04-20", caption: "Blooming marigold" }
+  ],
   alerts: [
     {
       id: "a1",
@@ -1082,9 +1041,7 @@ const plantData = [
   type: "Leafy Vegetable",
   scientificName: "Spinacia oleracea",
   description: "A nutrient-rich leafy vegetable that grows quickly and is ideal for home gardening.",
-  images: [
-    "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=800&q=80"
-  ],
+  images: ["/images/searchimages/spinach.jpeg"],
   health: 90,
   lifeCycleStage: "Growth",
   lifeCycleProgress: 65,
@@ -1121,6 +1078,7 @@ const plantData = [
   ]
 }
 ];
+
 // Sample growing calendar data
 const growingData = [
   { month: "January", activity: "Plan and purchase seeds" },
